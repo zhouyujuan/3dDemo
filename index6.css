@@ -1,0 +1,124 @@
+
+#box {
+	/*适配于chorme，Safari*/
+    -webkit-animation-name: animation; /*定义动画的名称*/
+    -webkit-animation-timing-function: ease-in-out;/*定义动画的执行路线*/
+    -webkit-animation-iteration-count: infinite;/*定义动画的执行次数*/
+    -webkit-animation-duration: 3s;/*定义动画的持续时间*/
+    margin: 80;
+    -webkit-transform-style: preserve-3d;/*定义动画的3d渲染*/
+    -webkit-transform-origin: 80px 80px 0;
+    /*火狐*/
+    -moz-animation-name: animation; /*定义动画的名称*/
+    -moz-animation-timing-function: ease-in-out;/*定义动画的执行路线*/
+    -moz-animation-iteration-count: infinite;/*定义动画的执行次数*/
+    -moz-animation-duration: 3s;/*定义动画的持续时间*/
+   
+    -moz-transform-style: preserve-3d;/*定义动画的3d渲染*/
+    -moz-transform-origin: 80px 80px 0;
+    
+}
+
+/*定义动画的的执行过程*/
+@keyframes animation {
+    16% {
+        transform: rotateY(-90deg);
+    }
+    33% {
+        transform: rotateY(-90deg) rotateZ(135deg);
+    }
+    50% {
+        transform: rotateY(225deg) rotateZ(135deg);
+    }
+    66% {
+        transform: rotateY(135deg) rotateX(135deg);
+    }
+    83% {
+        transform: rotateX(135deg);
+    }
+}
+
+
+/*魔方6个面的设置*/
+#box .one,
+#box .two,
+#box .three,
+#box .four,
+#box .five,
+#box .six {
+    position: absolute;
+    height: 160px;
+    width: 160px;
+    border: 3px solid #000;
+    background: rgba(255, 200, 100, 0.8);
+}
+
+#box .one {
+    -webkit-transform: translateZ(80px);
+    -moz-transform: translateZ(80px);
+}
+
+#box .two {
+    -webkit-transform: rotateX(-90deg) translateZ(80px);
+    -moz-transform: rotateX(-90deg) translateZ(80px);
+}
+
+#box .three {
+    -webkit-transform: rotateY(90deg) rotateX(90deg) translateZ(80px);
+     -moz-transform: rotateY(90deg) rotateX(90deg) translateZ(80px);
+}
+
+#box .four {
+    -webkit-transform: rotateY(180deg) rotateZ(90deg) translateZ(80px);
+    -moz-transform: rotateY(180deg) rotateZ(90deg) translateZ(80px);
+}
+
+#box .five {
+    -webkit-transform: rotateY(-90deg) rotateZ(90deg) translateZ(80px);
+    -moz-transform: rotateY(-90deg) rotateZ(90deg) translateZ(80px);
+}
+
+#box .six {
+    -webkit-transform: rotateY(90deg) translateZ(80px);
+    -moz-transform: rotateY(90deg) translateZ(80px);
+}
+
+/*每个面上的9个模块的设置*/
+#box .one div,
+#box .two div,
+#box .three div,
+#box .four div,
+#box .five div,
+#box .six div {
+    width: 51px;
+    height: 51px;
+    border-radius: 4px;
+    float: left;
+    border: 1px solid #000;
+}
+
+#box .one div {
+    background: #008000;
+}
+
+#box .two div {
+    background: #0000FF;
+}
+
+#box .three div {
+    background: #FFFF00;
+}
+
+#box .four div {
+    background: #FFA500;
+}
+
+#box .five div {
+    background: #fff;
+}
+
+#box .six div {
+    background: #DC143C;
+}
+
+
